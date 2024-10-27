@@ -21,9 +21,6 @@ public class GameServiceImpl implements GameService{
     @Override
     public Game getGame(Integer id) {
         Optional<Game> optionalGame = this.gameRepository.findById(id);
-//        if(optionalGame.isPresent()) return optionalGame.get();
-//        else return null;
-        // or :
         return optionalGame.orElse(null);
     }
 
